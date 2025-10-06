@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مسافر من الإمارات لمصر؟ اكسب من وزن شنطتك الفاضي!</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Cairo', sans-serif;
+    }
+
+    body {
+      background: url('https://images.unsplash.com/photo-1529070538774-1843cb3265df?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+      transition: background-color 0.4s, color 0.4s;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      text-align: center;
+    }
+
+    body.light {
+      background: #f5f7fa;
+      color: #222;
+    }
+
+    .container {
+      background: rgba(0, 0, 0, 0.55);
+      border-radius: 20px;
+      padding: 25px;
+      max-width: 650px;
+      backdrop-filter: blur(8px);
+    }
+
+    body.light .container {
+      background: rgba(255, 255, 255, 0.85);
+      color: #000;
+    }
+
+    h1 {
+      font-size: 1.9rem;
+      margin-bottom: 10px;
+      color: #ffcf40;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+      line-height: 1.7;
+    }
+
+    .reasons, .reviews {
+      margin: 25px 0;
+      text-align: right;
+    }
+
+    .reasons h2, .reviews h2 {
+      color: #ffcf40;
+      margin-bottom: 10px;
+      font-size: 1.3rem;
+    }
+
+    ul {
+      list-style: none;
+      line-height: 1.9;
+    }
+
+    li::before {
+      content: "⭐ ";
+    }
+
+    iframe {
+      width: 100%;
+      height: 500px;
+      border: none;
+      border-radius: 15px;
+      margin-top: 15px;
+    }
+
+    .contacts {
+      margin-top: 25px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    a.contact-btn {
+      background: #0077b6;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 18px;
+      border-radius: 10px;
+      transition: 0.3s;
+      font-weight: bold;
+    }
+
+    a.contact-btn:hover {
+      background: #ffb703;
+      color: #000;
+    }
+
+    .toggle-mode {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background: #ffcf40;
+      color: #000;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 10px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    footer {
+      margin-top: 35px;
+      font-size: 0.9rem;
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+  <button class="toggle-mode" onclick="toggleMode()">🌗 تبديل الوضع</button>
+
+  <div class="container">
+    <h1>✈️ مسافر من الإمارات لمصر؟ اكسب من وزن شنطتك الفاضي!</h1>
+    <p>لو مسافر من الإمارات لمصر، تقدر تستفيد من وزن شنطتك الفاضي وتكسب مبلغ كويس بسهولة وأمان.  
+      احنا بننسق معاك خطوة بخطوة عشان تبقى مطمن، وكل حاجة بتتم بطريقة محترمة وواضحة 100%.</p>
+
+    <div class="reasons">
+      <h2>ليه تختارنا؟</h2>
+      <ul>
+        <li>تعامل مضمون وآمن جدًا</li>
+        <li>تواصل بسيط وسريع على واتساب</li>
+        <li>العمولة مجزية وكل حاجة واضحة من الأول</li>
+      </ul>
+    </div>
+
+    <div class="reviews">
+      <h2>آراء الناس اللي جرّبت:</h2>
+      <ul>
+        <li>💬 "بصراحة التعامل محترم جدًا والتنسيق كان سهل وسريع!" – <strong>أحمد من دبي</strong></li>
+        <li>💬 "خدمة ممتازة ومضمونة.. أول تجربة وعدتها 100%" – <strong>مروة من الشارقة</strong></li>
+        <li>💬 "استفدت من وزن الشنطة وكسبت كمان.. شكراً جدًا ❤️" – <strong>خالد من أبوظبي</strong></li>
+      </ul>
+    </div>
+
+    <h2 style="color:#ffcf40; margin-top:20px;">سجّل بياناتك دلوقتي 👇</h2>
+    <iframe src="https://forms.gle/MQ1EnjFNGLU1qJqu9" loading="lazy"></iframe>
+
+    <div class="contacts">
+      <a href="https://wa.me/971547909135" target="_blank" class="contact-btn">📱 واتساب الإمارات</a>
+      <a href="https://wa.me/201102710577" target="_blank" class="contact-btn">📞 واتساب مصر</a>
+      <a href="#" class="contact-btn">💬 تليجرام (قريبًا)</a>
+      <a href="#" class="contact-btn">📧 البريد (قريبًا)</a>
+    </div>
+
+    <footer>
+      الخدمة دلوقتي مخصوص للمسافرين من الإمارات لمصر ✈️، وإن شاء الله قريب هنوسع لباقي البلاد 🙏
+    </footer>
+  </div>
+
+  <script>
+    function toggleMode() {
+      document.body.classList.toggle('light');
+    }
+  </script>
+</body>
+</html>
