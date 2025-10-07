@@ -172,23 +172,37 @@
       document.body.classList.toggle('light');
     }
   </script>
-  <script>
-  // راقب إرسال نموذج Google Form داخل الصفحة
-  const formFrame = document.querySelector("iframe");
-  if (formFrame) {
-    formFrame.addEventListener("load", function () {
-      // كود للتأكد إن الفورم اترسل فعلاً
-      if (formFrame.src.includes("formResponse")) {
-        const phone = "971547909135"; // رقمك بدون +
-        const apiKey = "1777158"; // الكود اللي وصلك من CallMeBot
-        const message = "🎯 تم تسجيل بيانات جديدة في الفورم من أحد المسافرين!";
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const phone = "971547909135"; // رقمك بدون +
+  const apiKey = "1777158"; // مفتاح API بتاعك
+  const message = "📩 فيه مسافر جديد سجل بياناته فى النموذج! ✈️";
 
-        fetch(`https://api.callmebot.com/whatsapp.php?phone=${encodeURIComponent(phone)}&text=${encodeURIComponent(message)}&apikey=${encodeURIComponent(apiKey)}`)
+  const iframe = document.querySelector("iframe");
+  if (!iframe) return;
+
+  let lastUrl = iframe.src;
+
+  setInterval(() => {
+    try {
+      const currentUrl = iframe.contentWindow.location.href;
+      if (currentUrl.includes("formResponse") && lastUrl !== currentUrl) {
+        lastUrl = currentUrl;
+        fetch(
+          `https://api.callmebot.com/whatsapp.php?phone=${encodeURIComponent(
+            phone
+          )}&text=${encodeURIComponent(message)}&apikey=${encodeURIComponent(
+            apiKey
+          )}`
+        )
           .then(() => console.log("✅ تم إرسال إشعار واتساب بنجاح"))
-          .catch(err => console.error("❌ حدث خطأ في الإرسال", err));
+          .catch((err) => console.error("❌ حدث خطأ في الإرسال", err));
       }
-    });
-  }
+    } catch (e) {
+      // تجاهل أخطاء cross-origin (عادية من Google)
+    }
+  }, 2000);
+});
 </script>
 </body>
 </html>
